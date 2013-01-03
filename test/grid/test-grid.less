@@ -1,0 +1,47 @@
+
+@css-assets-dir: '../../assets/';
+@import "mixins.less";
+
+* { .border-box(); }
+
+& {
+	@import "grid.less";
+
+	// Define a 4 column grid
+	.grid( 4, 70px, 10px, "grid4" );
+
+	// Test styles
+	.grid4-col-1,
+	.grid4-col-2,
+	.grid4-col-3 {
+		.box-shadow(red, 0, 0, 5px, 0, inset);
+	}
+
+	// Define a 16 column grid
+	.grid( 16, 40px, 5px, "grid16" );
+
+	// Test styles
+	.grid16-col-4,
+	.grid16-col-6,
+	.grid16-col-8,
+	.grid16-col-12 {
+		.box-shadow(blue, 0, 0, 5px, 0, inset);
+	}
+}
+
+& {
+	@import "grid.less";
+
+	.grid-col-def( @col-span ) when ( @col-span < 4 ) {
+		background-color: orange;
+	}
+	// Define a 4 column grid
+	.grid( 4, 70px, 10px, "gridover4" );
+
+	// Test styles
+	.gridover4-col-1,
+	.gridover4-col-2,
+	.gridover4-col-3 {
+		.box-shadow(purple, 0, 0, 5px, 0, inset);
+	}
+}
