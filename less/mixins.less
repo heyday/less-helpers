@@ -5,28 +5,11 @@
 
 // Global mixins file, all global helper mixins should go into this file
 
-// clearfix
-//============================================================
-
-.clearfix() {
-	*zoom:1;
-
-	&:before,
-	&:after {
-		content:"";
-		display:table;
-	}
-	&:after {
-		clear:both;
-	}
-}
-
-
 // text-shadow-fix
 //============================================================
 
 .text-shadow-fix() {
-	text-shadow:rgba(0,0,0,0.1) 1px 1px;
+	text-shadow: rgba(0,0,0,0.1) 1px 1px;
 }
 
 
@@ -47,8 +30,8 @@
 //
 // @example: .opacity(0.5);
 
-.opacity(@opacity: 0.5) {
-	opacity:@opacity;
+.opacity( @opacity: 0.5 ) {
+	opacity: @opacity;
 	@opacity-ie: @opacity * 100;
 	filter: ~'alpha(opacity=@{opacity-ie})';
 }
@@ -62,7 +45,7 @@
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
-	*behavior: url( "@{dir-theme}css/boxsizing.htc" );
+	*behavior: url( "@{css-assets-dir}boxsizing.htc" );
 }
 
 
