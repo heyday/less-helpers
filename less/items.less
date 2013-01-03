@@ -1,0 +1,40 @@
+// ==========================================================================
+// Items
+// ==========================================================================
+
+
+// The items file is for all modules that do not belong in 
+// typography.less, elements.less or their own .less file. 
+// All modules should be prefixed with [insert agreed guidelines for prefixes here]
+
+& {
+@import "vars.less";
+@import "mixins.less";
+
+
+// Menu (mnu)
+// ==========================================================================
+// Site wide navigation menus
+// Normally consist of a ribbon with some hover boxes.
+//
+// Example HTML:
+// <ul class="mnu mnu-small">
+//   <li class="mnu-item"><a href="" title="">Item one</a></li>
+// </ul>
+
+.mnu {
+	
+	// Menu items
+	.mnu-item {
+
+	}
+
+	// Smaller menu override
+	&.mnu-small {
+
+	}
+}
+
+
+// END OF SCOPE
+}
