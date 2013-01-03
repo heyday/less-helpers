@@ -1,6 +1,7 @@
 {
-  "name": "heyless",
-  "title": "Heyday less helpers",
+  "name": "less-helpers",
+  "title": "Less helper mixins and styles",
+  "description": "A set of basic reuseable less components",
   "version": "0.0.0",
   "devDependencies": {
     "grunt": "0.4.x",
