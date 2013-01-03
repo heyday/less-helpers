@@ -1,0 +1,10 @@
+{
+  "name": "heyless",
+  "title": "Heyday less helpers",
+  "version": "0.0.0",
+  "devDependencies": {
+    "grunt": "0.4.x",
+    "grunt-contrib-less": "~0.3.2",
+    "grunt-css": "~0.5.1"
+  }
+}
