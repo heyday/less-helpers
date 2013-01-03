@@ -1,0 +1,54 @@
+.h-ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  /* IE 6/7 fallback */
+
+  *text-indent: -9999px;
+}
+.h-ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%;
+}
+.h-hidden {
+  display: none !important;
+  visibility: hidden;
+}
+.h-visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+.h-visuallyhidden.h-focusable:active,
+.h-visuallyhidden.h-focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+.h-invisible {
+  visibility: hidden;
+}
+.h-clear {
+  clear: both;
+}
+.h-clearfix:before,
+.h-clearfix:after {
+  content: " ";
+  display: table;
+}
+.h-clearfix:after {
+  clear: both;
+}
+.h-clearfix {
+  *zoom: 1;
+}

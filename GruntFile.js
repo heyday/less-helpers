@@ -37,6 +37,26 @@ module.exports = function( grunt ) {
 		src:  'test/grid/test-grid.less',
 		dest: 'test/grid/test-grid.css'
 	};
+	config.less[ 'test-helpers' ] = {
+		options: {
+			// Possible less include file paths
+			paths: [
+				'less'
+			]
+		},
+		src:  'test/helpers/test-helpers.less',
+		dest: 'test/helpers/test-helpers.css'
+	};
+	config.less[ 'test-print' ] = {
+		options: {
+			// Possible less include file paths
+			paths: [
+				'less'
+			]
+		},
+		src:  'test/print/test-print.less',
+		dest: 'test/print/test-print.css'
+	};
 
 	// Lint css
 	config.csslint[ 'test' ] = {
