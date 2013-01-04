@@ -1,0 +1,9 @@
+{
+  "name": "less-helpers",
+  "title": "Less helper mixins and styles",
+  "description": "A set of basic reuseable less components",
+  "version": "0.0.0",
+  "dependencies": {
+    "bootstrap": "2.2.x"
+  }
+}
