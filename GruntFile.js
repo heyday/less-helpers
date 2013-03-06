@@ -73,6 +73,7 @@ module.exports = function( grunt ) {
 	};
 
 
+	grunt.registerTask( 'test', [ 'less'/*, 'csslint:test' - disabled for now, to many stupid errors */ ] );
 	grunt.registerTask( 'default', [ 'less'/*, 'csslint:test' - disabled for now, to many stupid errors */ ] );
 
 	//
