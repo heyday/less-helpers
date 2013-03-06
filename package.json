@@ -1,11 +1,34 @@
 {
   "name": "less-helpers",
-  "title": "Less helper mixins and styles",
+  "version": "0.1.0",
+  "main": [],
   "description": "A set of basic reuseable less components",
-  "version": "0.0.0",
+  "keywords": [ "less", "mixins" ],
   "devDependencies": {
-    "grunt": "0.4.x",
+    "grunt": "~0.4.0",
     "grunt-contrib-less": "~0.3.2",
     "grunt-css": "~0.5.1"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://heyday.mit-license.org/"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/heyday/less-helpers"
+    }
+  ],
+  "bugs": "https://github.com/heyday/less-helpers/issues",
+  "maintainers": [
+    {
+      "name": "Pieter Vanderwerff"
+    }
+  ],
+  "scripts": {
+    "test": "grunt test"
   }
 }
+
