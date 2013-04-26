@@ -5,7 +5,7 @@
 * { .box-sizing( border-box ); }
 
 & {
-	@import "grid.less";
+	@import (multiple) "grid.less";
 
 	// Define a 4 column grid
 	.grid( 4, 70px, 10px, "grid4" );
@@ -30,7 +30,7 @@
 }
 
 & {
-	@import "grid.less";
+	@import (multiple) "grid.less";
 
 	.grid-col-def( @col-span ) when ( @col-span < 4 ) {
 		background-color: orange;
