@@ -21,9 +21,10 @@
 //     Right side nav
 //   </div>
 // </div>
-.grid( @cols, @col-width, @gutter-width, @ns: "l" ) {
+.grid( @cols, @col-width, @gutter-width, @ns: "l", @max-width: 0 ) {
 	@grid-column-width: @col-width;
 	@grid-gutter-width: @gutter-width;
+	@grid-column-max-width: @max-width;
 
 	.grid-col(  @cols, ~"@{ns}-col"  );
 	.grid-push( @cols, ~"@{ns}-push" );
@@ -43,6 +44,12 @@
 	display: block;
 	float: left;
 	width: ( @grid-gutter-width + @grid-column-width ) * @col-span;
+}
+
+// For columns with 100% width i.e mobile styles
+.grid-col-def( @col-span ) when ( @grid-column-width = 100% ), ( @grid-column-max-width > 0 ) {
+	width: @grid-column-width;
+	max-width: @grid-column-max-width;
 }
 
 // Content holder definitions
@@ -65,11 +72,19 @@
 .grid-push-def( @col-offset: 1 ) {
 	margin-left: ( @grid-gutter-width + @grid-column-width ) * @col-offset;
 }
+// For columns with 100% width i.e mobile styles
+.grid-push-def( @col-offset: 1 ) when ( @grid-column-width = 100% ) {
+	margin-left: 0;
+}
 
 // Column pull definitions
 // This will set the styles for a specific column span negative offset
 .grid-pull-def( @col-offset: 1 ) {
 	margin-right: ( @grid-gutter-width + @grid-column-width ) * @col-offset;
+}
+// For columns with 100% width i.e mobile styles
+.grid-pull-def( @col-offset: 1 ) when ( @grid-column-width = 100% ) {
+	margin-right: 0;
 }
 
 // Column Width

@@ -4,7 +4,7 @@
 
 
 & {
-
+@import "adaptive.less";
 
 // Image replacement
 .h-ir {
@@ -85,6 +85,37 @@
 // Include this rule to trigger hasLayout and contain floats.
 .h-clearfix {
 	*zoom: 1;
+}
+
+// Adaptive Helper classes
+// ==========================================================================
+
+// For desktops
+.h-visible-phone     { display: none !important; }
+.h-visible-tablet    { display: none !important; }
+.h-hidden-phone      { }
+.h-hidden-tablet     { }
+.h-hidden-desktop    { display: none !important; }
+.h-visible-desktop   { display: inherit !important; }
+
+@media @tablet {
+	// Hide everything else
+	.h-hidden-desktop    { display: inherit !important; }
+	.h-visible-desktop   { display: none !important ; }
+	// Show
+	.h-visible-tablet    { display: inherit !important; }
+	// Hide
+	.h-hidden-tablet     { display: none !important; }
+}
+
+@media @mobile {
+	// Hide everything else
+	.h-hidden-desktop    { display: inherit !important; }
+	.h-visible-desktop   { display: none !important; }
+	// Show
+	.h-visible-phone     { display: inherit !important; } // Use inherit to restore previous behavior
+	// Hide
+	.h-hidden-phone      { display: none !important; }
 }
 
 
