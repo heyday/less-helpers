@@ -52,7 +52,7 @@ module.exports = function( grunt ) {
 			// Possible less include file paths
 			paths: [
 				'less',
-				'components'
+				'bower_components'
 			]
 		},
 		src:  'test/reset/test-reset.less',

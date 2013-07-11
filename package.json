@@ -6,7 +6,7 @@
   "keywords": [ "less", "mixins" ],
   "devDependencies": {
     "grunt": "~0.4.0",
-    "grunt-contrib-less": "~0.3.2",
+    "grunt-contrib-less": "~0.6.0",
     "grunt-css": "~0.5.1"
   },
   "licenses": [
