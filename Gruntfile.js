@@ -31,7 +31,8 @@ module.exports = function( grunt ) {
 		options: {
 			// Possible less include file paths
 			paths: [
-				'less'
+				'less',
+				'bower_components'
 			]
 		},
 		src:  'test/grid/test-grid.less',
@@ -41,7 +42,8 @@ module.exports = function( grunt ) {
 		options: {
 			// Possible less include file paths
 			paths: [
-				'less'
+				'less',
+				'bower_components'
 			]
 		},
 		src:  'test/helpers/test-helpers.less',
