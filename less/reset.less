@@ -10,7 +10,7 @@
 // https://github.com/h5bp/html5-boilerplate/blob/master/css/main.css
 
 & {
-	@import "./mixins.less";
+	@import (multiple, less) "./mixins.less";
 
 	// Add mixins required by the bootstrap reset.less file
 	// Would be nice if bootsrap imported these mixins for you and the mixins
@@ -26,5 +26,5 @@
 		outline-offset: -2px;
 	}
 
-	@import 'bootstrap/less/reset.less';
+	@import (less) 'normalize-css/normalize.css';
 }
