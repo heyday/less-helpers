@@ -90,32 +90,32 @@
 // Adaptive Helper classes
 // ==========================================================================
 
-// For desktops
-.h-visible-phone     { display: none !important; }
-.h-visible-tablet    { display: none !important; }
-.h-hidden-phone      { }
-.h-hidden-tablet     { }
-.h-hidden-desktop    { display: none !important; }
-.h-visible-desktop   { display: inherit !important; }
+// For wide format (large)
+.h-visible-small     { display: none !important; }
+.h-visible-medium    { display: none !important; }
+.h-hidden-small      { }
+.h-hidden-medium     { }
+.h-hidden-large    { display: none !important; }
+.h-visible-large   { display: inherit !important; }
 
-@media @tablet {
+@media @medium {
 	// Hide everything else
-	.h-hidden-desktop    { display: inherit !important; }
-	.h-visible-desktop   { display: none !important ; }
+	.h-hidden-large    { display: inherit !important; }
+	.h-visible-large   { display: none !important ; }
 	// Show
-	.h-visible-tablet    { display: inherit !important; }
+	.h-visible-medium    { display: inherit !important; }
 	// Hide
-	.h-hidden-tablet     { display: none !important; }
+	.h-hidden-medium     { display: none !important; }
 }
 
-@media @mobile {
+@media @small {
 	// Hide everything else
-	.h-hidden-desktop    { display: inherit !important; }
-	.h-visible-desktop   { display: none !important; }
+	.h-hidden-large    { display: inherit !important; }
+	.h-visible-large   { display: none !important; }
 	// Show
-	.h-visible-phone     { display: inherit !important; } // Use inherit to restore previous behavior
+	.h-visible-small     { display: inherit !important; } // Use inherit to restore previous behavior
 	// Hide
-	.h-hidden-phone      { display: none !important; }
+	.h-hidden-small      { display: none !important; }
 }
 
 
