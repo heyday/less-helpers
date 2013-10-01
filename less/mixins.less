@@ -5,6 +5,28 @@
 
 // Global mixins file, all global helper mixins should go into this file
 
+// bg-retina
+//============================================================
+//
+// @param color: transparent, #ff0000, rgba(255, 0, 0, 0.5), etc
+// @param filename: logo.png, bg.jpg etc.
+// @param x: left, 50px, 0%, etc
+// @param y: top, 50px, 0%, etc
+// @param width: 120px, 50% etc
+// @param height: 120px, 50% etc
+//
+// @example: .bg-retina( transparent, 'logo.png', 0%, 0%, no-repeat, 100px, 50px);
+
+.bg-retina( @color: 'transparent', @filename, @x, @y, @repeat: 'no-repeat', @width, @height ) {
+	background: @color url("@{filename}") @x @y @repeat;
+	@media @retina {
+		@src: ~`@{filename}.split( /(.gif|.png|.jpg|.jpeg)/, 2 ).join( '@2x' )`;
+		background: @color url("@{src}") @x @y @repeat;
+		background-size: @width @height;
+	}
+}
+
+
 // text-shadow-fix
 //============================================================
 

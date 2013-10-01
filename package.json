@@ -1,12 +1,12 @@
 {
   "name": "less-helpers",
-  "version": "0.2.0",
+  "version": "0.3.0-dev",
   "main": [],
   "description": "A set of basic reuseable less components",
   "keywords": [ "less", "mixins" ],
   "devDependencies": {
     "grunt": "~0.4.0",
-    "grunt-contrib-less": "~0.6.0",
+    "grunt-contrib-less": "~0.3.2",
     "grunt-css": "~0.5.1"
   },
   "licenses": [

@@ -1,0 +1,26 @@
+// ==========================================================================
+// Adpative setup
+// ==========================================================================
+
+// Break points
+// ==========================================================================
+@xsmall-min: 0px;
+@xsmall-max: 479px;
+
+@small-min: ( @xsmall-max + 1 );
+@small-max: 767px;
+
+@medium-min: ( @small-max + 1 );
+@medium-max: 959px;
+
+@screen: "only screen and";
+
+// Media Queries
+// ==========================================================================
+@small-narrow: ~"@{screen} (min-width: @{xsmall-min}) and (max-width: @{xsmall-max})";
+@small-wide: ~"@{screen} (min-width: @{small-min}) and (max-width: @{small-max})";
+@medium: ~"@{screen} (min-width: @{medium-min}) and (max-width: @{medium-max})";
+@small: ~"@{screen} (min-width: @{xsmall-min}) and (max-width: @{small-max})";
+@not-large: ~"@{screen} (min-width: @{xsmall-min}) and (max-width: @{medium-max})";
+// Retina
+@retina: ~"@{screen} (-webkit-min-device-pixel-ratio: 2), @{screen} (min--moz-device-pixel-ratio: 2), @{screen} (-o-min-device-pixel-ratio: 2/1), @{screen} (min-device-pixel-ratio: 2), @{screen} (min-resolution: 192dpi), @{screen} (min-resolution: 2dppx)";

@@ -52,3 +52,43 @@
 .h-clearfix {
   *zoom: 1;
 }
+.h-visible-phone {
+  display: none !important;
+}
+.h-visible-tablet {
+  display: none !important;
+}
+.h-hidden-desktop {
+  display: none !important;
+}
+.h-visible-desktop {
+  display: inherit !important;
+}
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .h-hidden-desktop {
+    display: inherit !important;
+  }
+  .h-visible-desktop {
+    display: none !important ;
+  }
+  .h-visible-tablet {
+    display: inherit !important;
+  }
+  .h-hidden-tablet {
+    display: none !important;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .h-hidden-desktop {
+    display: inherit !important;
+  }
+  .h-visible-desktop {
+    display: none !important;
+  }
+  .h-visible-phone {
+    display: inherit !important;
+  }
+  .h-hidden-phone {
+    display: none !important;
+  }
+}
