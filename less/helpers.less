@@ -4,7 +4,6 @@
 
 
 & {
-@import "adaptive.less";
 
 // Image replacement
 .h-ir {
@@ -85,37 +84,6 @@
 // Include this rule to trigger hasLayout and contain floats.
 .h-clearfix {
 	*zoom: 1;
-}
-
-// Adaptive Helper classes
-// ==========================================================================
-
-// For wide format (large)
-.h-visible-small     { display: none !important; }
-.h-visible-medium    { display: none !important; }
-.h-hidden-small      { }
-.h-hidden-medium     { }
-.h-hidden-large    { display: none !important; }
-.h-visible-large   { display: inherit !important; }
-
-@media @medium {
-	// Hide everything else
-	.h-hidden-large    { display: inherit !important; }
-	.h-visible-large   { display: none !important ; }
-	// Show
-	.h-visible-medium    { display: inherit !important; }
-	// Hide
-	.h-hidden-medium     { display: none !important; }
-}
-
-@media @small {
-	// Hide everything else
-	.h-hidden-large    { display: inherit !important; }
-	.h-visible-large   { display: none !important; }
-	// Show
-	.h-visible-small     { display: inherit !important; } // Use inherit to restore previous behavior
-	// Hide
-	.h-hidden-small      { display: none !important; }
 }
 
 

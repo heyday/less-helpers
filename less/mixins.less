@@ -5,7 +5,7 @@
 
 // Global mixins file, all global helper mixins should go into this file
 
-// bg-retina
+// bg-hi-dpi
 //============================================================
 //
 // @param color: transparent, #ff0000, rgba(255, 0, 0, 0.5), etc
@@ -15,11 +15,11 @@
 // @param width: 120px, 50% etc
 // @param height: 120px, 50% etc
 //
-// @example: .bg-retina( transparent, 'logo.png', 0%, 0%, no-repeat, 100px, 50px);
+// @example: .bg-hi-dpi( transparent, 'logo.png', 0%, 0%, no-repeat, 100px, 50px);
 
-.bg-retina( @color: 'transparent', @filename, @x, @y, @repeat: 'no-repeat', @width, @height ) {
+.bg-hi-dpi( @color: 'transparent', @filename, @x, @y, @repeat: 'no-repeat', @width, @height ) {
 	background: @color url("@{filename}") @x @y @repeat;
-	@media @retina {
+	@media @hi-dpi {
 		@src: ~`@{filename}.split( /(.gif|.png|.jpg|.jpeg)/, 2 ).join( '@2x' )`;
 		background: @color url("@{src}") @x @y @repeat;
 		background-size: @width @height;
