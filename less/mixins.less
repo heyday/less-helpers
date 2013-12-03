@@ -1,7 +1,7 @@
 // ==========================================================================
 // Mixins
 // ==========================================================================
-
+@import (multiple, less) "bootstrap/less/mixins.less";
 
 // Global mixins file, all global helper mixins should go into this file
 
@@ -43,35 +43,6 @@
 	-ms-filter: none;
 }
 
-
-// opacity
-//============================================================
-// @see http://www.w3.org/TR/css3-color/#transparency
-//
-// @param opacity: 0.5, 1, etc
-//
-// @example: .opacity(0.5);
-
-.opacity( @opacity: 0.5 ) {
-	opacity: @opacity;
-	@opacity-ie: @opacity * 100;
-	filter: ~'alpha(opacity=@{opacity-ie})';
-}
-
-
-// box-sizing
-//============================================================
-// @see http://dev.w3.org/csswg/css3-ui/#box-sizing
-
-// Box sizing
-.box-sizing( @boxmodel ) {
-	-webkit-box-sizing: @boxmodel;
-	-moz-box-sizing: @boxmodel;
-	box-sizing: @boxmodel;
-	// *behavior: url( "@{css-assets-dir}boxsizing.htc" );
-}
-
-
 // border-radius
 //============================================================
 // @see http://www.w3.org/TR/css3-background/#border-radius
@@ -84,34 +55,11 @@
 // @example: .border-radius(10px);
 // @example: .border-radius(10px, 10px, 0px, 0px);
 
+// To be removed in next major release. 
+// Keeping for backwards compatibility.
+
 .border-radius(...) {
-	  -webkit-border-radius: @arguments;
-		 -moz-border-radius: @arguments;
-			  border-radius: @arguments;
-
-	-webkit-background-clip: padding-box;
-	   -moz-background-clip: padding;
-			background-clip: padding-box;
-}
-
-
-// box-shadow
-//============================================================
-// @see http://www.w3.org/TR/css3-background/#box-shadow
-//
-// @param colour              :  #000, rgba, hsla
-// @param horizontal-offset   :  px, em
-// @param vertical-offset     :  px, em
-// @param blur-radius         :  px, em
-// @param spread-distance     :  px, em
-// @param inset               :  inset
-//
-// @example: .box-shadow(#000, 1px, 2px, 50px, 20px, inset, ~',', #fff, 1px, 2px, 50px, 5px);
-
-.box-shadow(...) {
-	-webkit-box-shadow: @arguments;
-	   -moz-box-shadow: @arguments;
-			box-shadow: @arguments;
+	border-radius: @arguments;
 }
 
 
@@ -216,34 +164,13 @@
 //
 // @example : .transform( rotate( 30deg ) );
 
+// To be removed in next major release in favour of Bootstrap API.
+// Keeping for backwards compatibility.
+
 .transform(...) {
 	-webkit-transform: @arguments;
-	   -moz-transform: @arguments;
 		-ms-transform: @arguments;
-		 -o-transform: @arguments;
 			transform: @arguments;
-}
-
-
-// transform-origin
-//============================================================
-// @see http://www.w3.org/TR/css3-3d-transforms/#transform-origin-property
-//
-// @param value               :  left   |
-//                               center |
-//                               right  |
-//                               px     |
-//                               em     |
-//                               %;
-//
-// @example : .transform-origin( 20%, 50% );
-
-.transform-origin(...) {
-	-webkit-transform-origin: @arguments;
-	   -moz-transform-origin: @arguments;
-		-ms-transform-origin: @arguments;
-		 -o-transform-origin: @arguments;
-			transform-origin: @arguments;
 }
 
 
@@ -257,102 +184,6 @@
 
 .transform-style(...) {
 	-webkit-transform-style: @arguments;
-	   -moz-transform-style: @arguments;
 		-ms-transform-style: @arguments;
-		 -o-transform-style: @arguments;
 			transform-style: @arguments;
-}
-
-
-// translate
-//============================================================
-// @see http://www.w3.org/TR/css3-3d-transforms/#transform-functions
-//
-// @param translate-x         :  px
-// @param translate-y         :  px
-//
-// @example : .translate( 20px, 40px );
-
-.translate(...) {
-	-webkit-transform: translate(@arguments);
-	   -moz-transform: translate(@arguments);
-		-ms-transform: translate(@arguments);
-		 -o-transform: translate(@arguments);
-		    transform: translate(@arguments);
-}
-
-
-// scale
-//============================================================
-// @see http://www.w3.org/TR/css3-3d-transforms/#transform-functions
-//
-// @param scale-x             :  0.5, 2, etc
-// @param scale-y             :  0.5, 2, etc
-//
-// @example : .scale( 1.5 );
-// @example : .scale( 1.5, 0.5 );
-
-.scale(...) {
-	-webkit-transform: scale(@arguments);
-	   -moz-transform: scale(@arguments);
-		-ms-transform: scale(@arguments);
-		 -o-transform: scale(@arguments);
-			transform: scale(@arguments);
-}
-
-
-// rotate
-//============================================================
-// @see http://www.w3.org/TR/css3-3d-transforms/#transform-functions
-//
-// @param angle               :  0deg
-//
-// @example : .rotate( 5deg );
-
-.rotate(...) {
-	-webkit-transform: rotate(@arguments);
-	   -moz-transform: rotate(@arguments);
-		-ms-transform: rotate(@arguments);
-		 -o-transform: rotate(@arguments);
-			transform: rotate(@arguments);
-}
-
-
-// skew
-//============================================================
-// @see http://www.w3.org/TR/css3-3d-transforms/#transform-functions
-//
-// @param axis-x              :  0deg
-// @param axis-y              :  0deg
-//
-// @example : .skew( 15deg );
-// @example : .skew( 15deg, 5deg );
-
-.skew(...) {
-	-webkit-transform: skew(@arguments);
-	   -moz-transform: skew(@arguments);
-		-ms-transform: skew(@arguments);
-		 -o-transform: skew(@arguments);
-			transform: skew(@arguments);
-}
-
-
-// transition
-//============================================================
-// @see http://www.w3.org/TR/css3-transitions/
-//
-// @param properties          :  all, left, opacity, etc
-// @param duration            :  1s, 1000ms
-// @param delay               :  1s, 1000ms
-// @param easing              :  linear, ease-in-out, etc
-//
-// @example : .transition( all, 0.5s, ease-out );
-// @example : .transition( width, 0.5s, 1s, ease-in-out );
-
-.transition(...) {
-	-webkit-transition: @arguments;
-	   -moz-transition: @arguments;
-		-ms-transition: @arguments;
-		 -o-transition: @arguments;
-			transition: @arguments;
 }
