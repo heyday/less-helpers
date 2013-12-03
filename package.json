@@ -1,6 +1,6 @@
 {
   "name": "less-helpers",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "main": [],
   "description": "A set of basic reuseable less components",
   "keywords": [ "less", "mixins" ],
