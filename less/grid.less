@@ -41,7 +41,7 @@
 	.fluidgrid( @cols, @pc, @gutter-width, ~"@{ns-safe}-i" );
 }
 
-.grid( @cols, @col-width, @gutter-width, @ns: "l", @ns-fluid: "" ) when ( isstring( @ns-fluid ) ) {
+.grid( @cols, @col-width, @gutter-width, @ns: "l", @ns-fluid: false ) when ( isstring( @ns-fluid ) ) {
 	@ns-fluid-safe: ~"@{ns-fluid}";
 	@pc: ( 100% / @cols );
 	// Fluid grid
