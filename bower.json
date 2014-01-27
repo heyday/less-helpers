@@ -6,7 +6,7 @@
   "keywords": [ "less", "mixins" ],
   "dependencies": {
     "normalize-css": "~2.1.0",
-    "bootstrap": "~3.0.2",
+    "bootstrap": "~3.0.2"
   },
   "licenses": [
     {
