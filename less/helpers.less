@@ -87,6 +87,24 @@
 	*zoom: 1;
 }
 
+// Display SVG when supported, fall back to PNG
+// Depends on Modernizr's SVG support detection
+.h-svg-png {
+	&[src$="svg"] {
+		display: none;
+	}
+
+	.svg & {
+		&[src$="svg"] {
+			display: block;
+		}
+
+		&[src$="png"] {
+			display: none;
+		}
+	}
+}
+
 // Adaptive Helper classes
 // ==========================================================================
 
