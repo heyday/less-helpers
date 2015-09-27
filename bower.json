@@ -5,8 +5,8 @@
   "description": "A set of basic reuseable less components",
   "keywords": [ "less", "mixins" ],
   "dependencies": {
-    "normalize-css": "~2.1.0",
-    "bootstrap": "~3.0.2"
+    "bootstrap": "^3.3.5",
+    "normalize-css": "^2.3.1"
   },
   "licenses": [
     {
@@ -30,6 +30,7 @@
     "test/",
     ".gitignore",
     "Gruntfile.js",
+    "gulpfile.js",
     "package.json"
   ]
 }
