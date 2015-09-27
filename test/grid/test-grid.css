@@ -59,9 +59,7 @@
 .grid4-col-1,
 .grid4-col-2,
 .grid4-col-3 {
-  -webkit-box-shadow: #ff0000 0 0 5px 0 inset;
-  -moz-box-shadow: #ff0000 0 0 5px 0 inset;
-  box-shadow: #ff0000 0 0 5px 0 inset;
+  box-shadow: red, 0, 0, 5px, 0, inset;
 }
 .grid16-col-1 {
   display: block;
@@ -252,9 +250,7 @@
 .grid16-col-6,
 .grid16-col-8,
 .grid16-col-12 {
-  -webkit-box-shadow: #0000ff 0 0 5px 0 inset;
-  -moz-box-shadow: #0000ff 0 0 5px 0 inset;
-  box-shadow: #0000ff 0 0 5px 0 inset;
+  box-shadow: blue, 0, 0, 5px, 0, inset;
 }
 .gridover4-col-1 {
   display: block;
@@ -315,7 +311,6 @@
 .gridover4-col-1,
 .gridover4-col-2,
 .gridover4-col-3 {
-  -webkit-box-shadow: #800080 0 0 5px 0 inset;
-  -moz-box-shadow: #800080 0 0 5px 0 inset;
-  box-shadow: #800080 0 0 5px 0 inset;
+  box-shadow: purple, 0, 0, 5px, 0, inset;
 }
+/*# sourceMappingURL=test-grid.css.map */
