@@ -4,10 +4,6 @@ var less = require('gulp-less-sourcemap');
 var path = require('path');
 var consolidate = require('gulp-consolidate');
 
-function realPath(relativePath) {
-	return path.join(__dirname, relativePath);
-}
-
 // Build LESS
 gulp.task('test', ['less:test-grid', 'less:test-helpers', 'less:test-reset']);
 
