@@ -4,7 +4,6 @@
 
 
 & {
-@import "adaptive.less";
 
 // Image replacement
 .h-ir {
@@ -116,7 +115,7 @@
 .h-hidden-large    { display: none !important; }
 .h-visible-large   { display: inherit !important; }
 
-@media @medium {
+@media @md {
 	// Hide everything else
 	.h-hidden-large    { display: inherit !important; }
 	.h-visible-large   { display: none !important ; }
@@ -126,7 +125,7 @@
 	.h-hidden-medium     { display: none !important; }
 }
 
-@media @small {
+@media @sm {
 	// Hide everything else
 	.h-hidden-large    { display: inherit !important; }
 	.h-visible-large   { display: none !important; }
@@ -135,7 +134,6 @@
 	// Hide
 	.h-hidden-small      { display: none !important; }
 }
-
 
 // END OF SCOPE
 }
