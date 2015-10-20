@@ -86,6 +86,54 @@
 	*zoom: 1;
 }
 
+// Display SVG when supported, fall back to PNG
+// Depends on Modernizr's SVG support detection
+.h-svg-png {
+	&[src$="svg"] {
+		display: none;
+	}
+
+	.svg & {
+		&[src$="svg"] {
+			display: block;
+		}
+
+		&[src$="png"] {
+			display: none;
+		}
+	}
+}
+
+// Adaptive Helper classes
+// ==========================================================================
+
+// For wide format (large)
+.h-visible-small     { display: none !important; }
+.h-visible-medium    { display: none !important; }
+.h-hidden-small      { }
+.h-hidden-medium     { }
+.h-hidden-large    { display: none !important; }
+.h-visible-large   { display: inherit !important; }
+
+@media @medium {
+	// Hide everything else
+	.h-hidden-large    { display: inherit !important; }
+	.h-visible-large   { display: none !important ; }
+	// Show
+	.h-visible-medium    { display: inherit !important; }
+	// Hide
+	.h-hidden-medium     { display: none !important; }
+}
+
+@media @small {
+	// Hide everything else
+	.h-hidden-large    { display: inherit !important; }
+	.h-visible-large   { display: none !important; }
+	// Show
+	.h-visible-small     { display: inherit !important; } // Use inherit to restore previous behavior
+	// Hide
+	.h-hidden-small      { display: none !important; }
+}
 
 // END OF SCOPE
 }

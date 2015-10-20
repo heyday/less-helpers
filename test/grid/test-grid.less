@@ -1,11 +1,11 @@
 
 @css-assets-dir: '../../assets/';
-@import "mixins.less";
+@import "../../less/mixins.less";
 
 * { .box-sizing( border-box ); }
 
 & {
-	@import (multiple) "grid.less";
+	@import (multiple) "../../less/grid.less";
 
 	// Define a 4 column grid
 	.grid( 4, 70px, 10px, "grid4" );
@@ -14,7 +14,7 @@
 	.grid4-col-1,
 	.grid4-col-2,
 	.grid4-col-3 {
-		.box-shadow(red, 0, 0, 5px, 0, inset);
+		box-shadow: red, 0, 0, 5px, 0, inset;
 	}
 
 	// Define a 16 column grid
@@ -25,12 +25,12 @@
 	.grid16-col-6,
 	.grid16-col-8,
 	.grid16-col-12 {
-		.box-shadow(blue, 0, 0, 5px, 0, inset);
+		box-shadow: blue, 0, 0, 5px, 0, inset;
 	}
 }
 
 & {
-	@import (multiple) "grid.less";
+	@import (multiple) "../../less/grid.less";
 
 	.grid-col-def( @col-span ) when ( @col-span < 4 ) {
 		background-color: orange;
@@ -42,6 +42,6 @@
 	.gridover4-col-1,
 	.gridover4-col-2,
 	.gridover4-col-3 {
-		.box-shadow(purple, 0, 0, 5px, 0, inset);
+		box-shadow: purple, 0, 0, 5px, 0, inset;
 	}
 }
