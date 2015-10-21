@@ -34,6 +34,46 @@
 	text-shadow: rgba(0,0,0,0.1) 1px 1px;
 }
 
+// Loading spinner with non-CSS3 fallback to text (requires Modernizr)
+//============================================================
+
+.loading-spinner(@color, @size, @strokeSize, @speed: 0.7s) {
+	width: @size;
+	height: @size;
+	text-indent: -9999em;
+	.border-radius(50%);
+	border: @strokeSize solid fade(@color, 20%);
+	border-left-color: @color;
+	.animation(spin360 @speed infinite linear);
+
+	.no-cssanimations & {
+		border: none;
+		width: 100%;
+		height: 100%;
+		content: 'Loading..';
+		.border-radius(0);
+		color: #FFF;
+		text-indent: 0;
+	}
+
+	@-webkit-keyframes spin360 {
+		0% {
+			.transform(rotate(0deg));
+		}
+		100% {
+			.transform(rotate(360deg));
+		}
+	}
+
+	@keyframes spin360 {
+		0% {
+			.transform(rotate(0deg));
+		}
+		100% {
+			.transform(rotate(360deg));
+		}
+	}
+}
 
 // clear-filter
 //============================================================
