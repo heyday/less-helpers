@@ -34,6 +34,23 @@
 	text-shadow: rgba(0,0,0,0.1) 1px 1px;
 }
 
+// Vendor prefix generator for animation definitions
+//============================================================
+
+.define-animation(@name, @config: {}) {
+	@-webkit-keyframes @name {
+		@config();
+	}
+
+	@-moz-keyframes @name {
+		@config();
+	}
+
+	@keyframes @name {
+		@config();
+	}
+}
+
 // Loading spinner with non-CSS3 fallback to text (requires Modernizr)
 //============================================================
 
